@@ -9,7 +9,7 @@ class IndexPage {
     get registrationIndex_Button() {return $('//*[@class="header__signup"]')}
     get events_DropDown() {return $('//*[@title="Events"]')}
     get allEvents_Button() {return $('//*[@src="/static/img/icons/temp_header_icons/event.svg"]')}
-    
+    get profilIcon_Image() {return $('//img[@id="test-avatar-icon"]')}
 
 }
 
