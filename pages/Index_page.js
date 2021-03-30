@@ -10,6 +10,12 @@ class IndexPage {
     get events_DropDown() {return $('//*[@title="Events"]')}
     get allEvents_Button() {return $('//*[@src="/static/img/icons/temp_header_icons/event.svg"]')}
     get profilIcon_Image() {return $('//img[@id="test-avatar-icon"]')}
+    get shoppingCart_Icon() {return $('//*[@class="cart"]')}
+    get language_DropDown() {return $('//*[@class="current-flag"]')}
+    get englishLanguage_Button() {return $('//*[@id="change-language-en"]')}
+    get addShop_Button() {return $('//*[@href="/en/profile/add-shop"]')}
+    get searchBox_Field() {return $('//*[@class="search-field toggle-color"]')}
+
 
 }
 
