@@ -3,6 +3,7 @@
 //
 
 class signUpWithFacebookPage {
+    
     get facebookButton() {return $('//button[@id="signInOnFacebook"]')}
     get facebookEmailField() {return $('//input[@id="email"]')}
     get facebookPasswordField() {return $('//input[@id="pass"]')}

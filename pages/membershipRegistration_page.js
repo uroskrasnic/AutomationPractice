@@ -3,6 +3,7 @@
 //
 
 class MembershipRegistrationPage {
+    
     get membershipRegistration_Text() {return $('//*[text()="Membership registration"]')}
 
 }

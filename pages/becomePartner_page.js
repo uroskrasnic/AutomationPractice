@@ -3,6 +3,7 @@
 //
 
 class BecomePartnerPage {
+
     get legalPersonName_Field() {return $('//input[@id="legal_person"]')}
     get companyName_Field() {return $('//input[@id="company_name"]')}
     get taxNumber_Field() {return $('//input[@id="vat"]')}
@@ -14,6 +15,7 @@ class BecomePartnerPage {
     get zipCode_Field() {return $('//input[@id="zip"]')}
     get address_Field() {return $('//input[@id="address"]')}
     get contiune_Button() {return $('//button[@class="purple__btn partner__btn"]')}
+    get country_DropDown() {return $('//select[@id="country"]')}
 
 }
 

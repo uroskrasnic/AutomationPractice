@@ -3,6 +3,7 @@
 //
 
 class RegistrationPage {
+    
     get firstName_Field() {return $('//input[@id="first_name"]')}
     get lastName_Field() {return $('//input[@id="last_name"]')}
     get email_Field() {return $('//input[@id="email2"]')}

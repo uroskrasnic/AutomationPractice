@@ -4,9 +4,9 @@
 
 class LoginPage {
 
-get login_Button() { return $('//button[@class="purple__btn"]')}
-get email_Field() {return $('//input[@id="email"]')}
-get password_Field() {return $('//input[@type="password"]')}
+    get login_Button() { return $('//button[@class="purple__btn"]')}
+    get email_Field() {return $('//input[@id="email"]')}
+    get password_Field() {return $('//input[@type="password"]')}
 
 }
 
