@@ -20,4 +20,4 @@ class IndexPage {
 
 }
 
-module.exports = new IndexPage
+module.exports = new IndexPage()

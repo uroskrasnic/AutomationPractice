@@ -16,7 +16,7 @@ class BecomePartnerPage {
     get address_Field() {return $('//input[@id="address"]')}
     get continue_Button() {return $('//button[@class="purple__btn partner__btn"]')}
     get country_DropDown() {return $('//select[@id="country"]')}
-    get srbija_List() {return $('(//option[@value="Serbia"])[1]')}
+    get serbia_List() {return $('(//option[@value="Serbia"])[1]')}
 
 }
 

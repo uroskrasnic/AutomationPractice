@@ -4,7 +4,6 @@
 
     class ShopSettings {
 
-        get selectShop_DropDown() {return $('(//div[@id="open-type-picker"])[2]')}
         get description_DropDown() {return $('(//div[@class="section-column s-column"])[5]')}
         get description_TextArea() {return $('//div[@class="ql-editor ql-blank"]')}
         get intro_DropDown() {return $('(//div[@class="section-column s-column"])[6]')}
