@@ -16,6 +16,7 @@ class IndexPage {
     get englishLanguage_Button() {return $('//*[@id="change-language-en"]')}
     get addShop_Button() {return $('//*[@href="/en/profile/add-shop"]')}
     get searchBox_Field() {return $('//*[@class="search-field toggle-color"]')}
+    get shops_Button() {return $('//img[@src="/static/img/shop.svg"]')}
 
 }
 
