@@ -1,6 +1,6 @@
 # Automation Practice
 
-This is Automation Practice of e-commerce site stage.sacret-life.com.
+This is Automation Practice of e-commerce site <stage.sacret-life.com.>
 
 
 ### If you want to run this tests, type that in your command line
