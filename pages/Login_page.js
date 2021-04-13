@@ -8,6 +8,15 @@ class LoginPage {
     get email_Field() {return $('//input[@id="email"]')}
     get password_Field() {return $('//input[@type="password"]')}
 
+    fillEmailAndPasswordField(){
+        this.email_Field.setValue('uroskrasnic@yahoo.com')
+        this.password_Field.setValue('Trening12!')
+    }
+
+    clickOnLoginButton(){
+        this.login_Button.click()
+    }
+    
 }
 
 module.exports = new LoginPage()
