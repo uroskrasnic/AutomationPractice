@@ -21,6 +21,7 @@ class IndexPage {
     get shops_Button() {return $('//img[@src="/static/img/shop.svg"]')}
     get userName() {return $('//p[@class="user--name"]')}
     get accountVerification_Text() {return $('//h1[text()="Account verification"]')}
+    get addWebinar_Button() {return $('//a[@href="/en/partners/webinars/add"]')}
 
     clickOnLoginIndexButton(){
         this.loginIndex_Button.click()
@@ -45,6 +46,14 @@ class IndexPage {
         this.accountVerification_Text.waitForDisplayed({timeout: 30000})
         const accountVerificationText = this.accountVerification_Text.getText()
         assert.equal(accountVerificationText, 'Account verification')
+    }
+
+    clickOnPartnerDropDown(){
+        this.partner_DropDown.click()
+    }
+
+    clickOnAddWebinarButton(){
+        this.addWebinar_Button.click()
     }
     
 }
