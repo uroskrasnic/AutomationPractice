@@ -3,9 +3,9 @@
 //
 
 const { Given, When, Then } = require('cucumber');
-const IndexPage = require('../pages/Index_page');
+const IndexPage = require('../pages/index_page');
 const AddWebinarPage = require('../pages/addWebinar_page');
-const LoginPage = require('../pages/Login_page');
+const LoginPage = require('../pages/login_page');
 
 Given(/^That User is logged in into SLP$/, () => {
 	IndexPage.goToLoginPage()
@@ -30,18 +30,18 @@ Then(/^Click on Save button$/, () => {
 Then(/^On Add Webinar page in header section fill all required content$/, () => {
 	AddWebinarPage.titleText()
 	AddWebinarPage.dateSet()
+	//AddWebinarPage.addCoverImage()
+	//AddWebinarPage.addThumbnailImage()
 });
 
 Then(/^Fill all mandatory fields about Link,Price,Description,Organizers,Speakers etc$/, () => {
 	AddWebinarPage.fillUrlDropDown()
 	AddWebinarPage.fillPriceDropDown()
 	AddWebinarPage.descriptionInsertText()
-
 	AddWebinarPage.introInsertText()
 	AddWebinarPage.fillOrganizersDropDown()
 	AddWebinarPage.fillSpeakersDropDown()
 	AddWebinarPage.fillWWYLDropDown()
-
 	AddWebinarPage.fillFrequentlyAskedQuestion()
 	AddWebinarPage.fillSponsorsDropDown()
 	AddWebinarPage.fillPartnersDropDown()

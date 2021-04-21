@@ -2,7 +2,9 @@
 // Login Page
 //
 
-class LoginPage {
+const BasePage = require("./basePage")
+
+class LoginPage extends BasePage{
 
     get login_Button() { return $('//button[@class="purple__btn"]')}
     get email_Field() {return $('//input[@id="email"]')}
@@ -14,7 +16,7 @@ class LoginPage {
     }
 
     clickOnLoginButton(){
-        this.login_Button.click()
+        this.click(this.login_Button)
     }
     
 }

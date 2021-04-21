@@ -3,8 +3,10 @@
 //
 
 var randomWords = require('random-words');
+const { UserPassword, LastName } = require('../config/data/userData');
+const BasePage = require('./basePage');
 
-class RegistrationPage {
+class RegistrationPage extends BasePage{
     
     get firstName_Field() {return $('//input[@id="first_name"]')}
     get lastName_Field() {return $('//input[@id="last_name"]')}
@@ -16,19 +18,19 @@ class RegistrationPage {
     get createAccount_Button() {return $('//*[@id="create-acc"]')}
 
    fillAllFieldsWithData(){
-       this.firstName_Field.setValue(randomWords()) 
-       this.lastName_Field.setValue('Milosevic')
-       this.email_Field.setValue(randomWords() + '@yopmail.com')
-       this.password_Field.setValue('Trening12!')
-       this.retypePassword_Filed.setValue('Trening12!')
+       this.setValue(this.firstName_Field, randomWords())
+       this.setValue(this.lastName_Field, LastName)
+       this.setValue(this.email_Field, (randomWords() + '@yopmail.com'))
+       this.setValue(this.password_Field, UserPassword)
+       this.setValue(this.retypePassword_Filed, UserPassword)
     }
 
     checkConfirmationAge(){
-        this.confirmationAge_Checkbox.click()
+        this.click(this.confirmationAge_Checkbox)
     }
 
     clickOnCreateAccount(){
-        this.createAccount_Button.click()
+        this.click(this.createAccount_Button)
     }
    
 }

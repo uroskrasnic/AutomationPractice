@@ -3,8 +3,9 @@
 //
 
 const assert = require('assert')
+const BasePage = require('./basePage')
 
-class IndexPage {
+class IndexPage extends BasePage{
     
     get partner_DropDown() {return $('//a[@title="Partner"]')}
     get becomePartner_Button() {return $('//*[@href="/en/become_partner/partner_subscription"]')}
@@ -23,39 +24,36 @@ class IndexPage {
     get accountVerification_Text() {return $('//h1[text()="Account verification"]')}
     get addWebinar_Button() {return $('//a[@href="/en/partners/webinars/add"]')}
 
-    clickOnLoginIndexButton(){
-        this.loginIndex_Button.click()
-    }
-
     goToLoginPage(){
         browser.url('/')
         browser.maximizeWindow()
     }
 
+    clickOnLoginIndexButton(){
+        this.click(this.loginIndex_Button)
+    }
+
     loginConfirmationText(){
-        this.partner_DropDown.waitForDisplayed({timeout: 30000})
-        const partnerText = this.partner_DropDown.getText()
+        const partnerText = this.getText(this.partner_DropDown)
         strictEqual(partnerText, 'Partner')
     }
 
     clickOnRegistrationButton(){
-        this.registrationIndex_Button.click()
+        this.click(this.registrationIndex_Button)
     }
 
     emailConfirmationIsSent(){
-        this.accountVerification_Text.waitForDisplayed({timeout: 30000})
-        const accountVerificationText = this.accountVerification_Text.getText()
+        const accountVerificationText = this.getText(this.accountVerificationText)
         assert.equal(accountVerificationText, 'Account verification')
     }
 
     clickOnPartnerDropDown(){
-        this.partner_DropDown.click()
+        this.click(this.partner_DropDown)
     }
 
     clickOnAddWebinarButton(){
-        this.addWebinar_Button.click()
+        this.click(this.addWebinar_Button)
     }
-    
 }
 
 module.exports = new IndexPage()
