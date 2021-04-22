@@ -1,5 +1,5 @@
 //
-//        Registration.StepDefinitions.js
+// Registration.StepDefinitions.js
 //
 
 const { Given, When, Then } = require('cucumber');

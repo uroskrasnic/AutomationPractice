@@ -1,12 +1,15 @@
 //
-//            Add Webinar Page
+// Add Webinar Page
 //
 
 var randomWords = require('random-words');
 const IndexPage = require("./index_page")
 const path = require('path');
 const BasePage = require('./basePage');
-const userData = require('../config/data/userData');
+const titleAndLinksData = require('../config/data/titleAndLinksData');
+const priceData = require('../config/data/priceData');
+const organizersAndSpeakersData = require('../config/data/organizersAndSpeakersData');
+const sponsorsAndPartnersData = require('../config/data/sponsorsAndPartnersData');
 
 class AddWebinar extends BasePage{
 
@@ -17,7 +20,7 @@ class AddWebinar extends BasePage{
     get price_DropDown() {return $('//div[@class="accordion-header ng-tns-c97-32 ng-star-inserted"]')}
     get intro_DropDown() { return $('//div[text()="Intro"]')}
     get description_DropDown() {return $('//div[@class="accordion-header ng-tns-c97-27 ng-star-inserted"]')}
-    get speakers_DropDown() {return $('//*[@class="ng-tns-c97-12"and text()="Speakers"]')}
+    get speakers_DropDown() {return $('//*[@class="ng-tns-c97-37"and text()="Speakers"]')}
     get organizers_DropDown() {return $('//div[text()="Organizers"]')}
     get sponsors_DropDown() {return $('//div[@class="accordion-header ng-tns-c97-43 ng-star-inserted"]')}
     get partners_DropDown() {return $('//div[@class="accordion-header ng-tns-c97-45 ng-star-inserted"]')}
@@ -82,7 +85,7 @@ class AddWebinar extends BasePage{
     }
 
     titleText(){
-        this.setValue(this.title_Field, WebinarTitle)
+        this.setValue(this.title_Field, titleAndLinksData.WebinarTitle)
     }
 
     dateSet(){
@@ -119,75 +122,75 @@ class AddWebinar extends BasePage{
     }
 
     fillUrlDropDown(){
-        this.click(this.urlTrailer_Field)
-        this.setValue(this.urlTrailer_Field, userData.UrlTrailer)
-        this.setValue(this.zoomUrl_Field,           )
-        this.setValue(this.zoomPassword_Field,        )
+        this.click(this.url_DropDown)
+        this.setValue(this.urlTrailer_Field, titleAndLinksData.UrlTrailer)
+        this.setValue(this.zoomUrl_Field, titleAndLinksData.ZoomUrl)
+        this.setValue(this.zoomPassword_Field, titleAndLinksData.ZoomPassword)
     }
 
     fillPriceDropDown(){
         this.click(this.price_DropDown)
-        this.setValue(this.priceName_Field, '')
-        this.setValue(this.priceInEuro_Field, '')
-        this.setValue(this.bussinesValueInPercentage_Field, '')
-        this.setValue(this.quantity_Field, '')
-        this.setValue(this.stockAvailbillity_Field, '')
-        this.setValue(this.specialPrice_Field, '')
+        this.setValue(this.priceName_Field, priceData.PriceName)
+        this.setValue(this.priceInEuro_Field, priceData.PriceInEuro)
+        this.setValue(this.bussinesValueInPercentage_Field, priceData.BVInPercentage)
+        this.setValue(this.quantity_Field, priceData.Quantity)
+        this.setValue(this.stockAvailbillity_Field, priceData.StockAvailbillity)
+        this.setValue(this.specialPrice_Field, priceData.SpecialPrice)
         this.click(this.specialPriceFromTo_Button)
         this.click(this.date_Calendar)
         this.click(this.saveCalendarButton)
-        this.setValue(this.offerIncludes_Field, '')
+        this.setValue(this.offerIncludes_Field, priceData.OfferIncludes)
     }
 
     descriptionInsertText(){
         this.click(this.description_DropDown)
         this.click(this.description_TextArea)
-        //this.setValue(this.description_TextArea,           )
+        this.setValue(this.description_TextArea, randomWords({exactly: 100, maxLength: 8}))
     }
 
     introInsertText(){
         this.click(this.intro_DropDown)
-        //this.setValue(this.intro_Field, randomWords({exactly: 20, maxLength: 8}))
+        this.setValue(this.intro_Field, randomWords({exactly: 20, maxLength: 8}))
     }
 
     fillOrganizersDropDown(){
         this.click(this.organizers_DropDown)
-        this.setValue(this.organizatorsMail_Field, 'markocvorovic@yopmail.com')
-        this.setValue(this.organizerOgrnization_Field, 'Bloxico')
-        this.setValue(this.organizatorsName_Field, 'Marko')
-        this.setValue(this.organizatorsSurname_Field, 'Cvorovic')
-        this.setValue(this.organizatorsTitle_Field, 'Mr')
+        this.setValue(this.organizatorsMail_Field, organizersAndSpeakersData.OrganizersMail)
+        this.setValue(this.organizerOgrnization_Field, organizersAndSpeakersData.OrganizersOrganization)
+        this.setValue(this.organizatorsName_Field, organizersAndSpeakersData.OrganizersName)
+        this.setValue(this.organizatorsSurname_Field, organizersAndSpeakersData.OrganizersSurname)
+        this.setValue(this.organizatorsTitle_Field, organizersAndSpeakersData.OrganizersTitle)
     }
 
     fillSpeakersDropDown(){
         this.click(this.speakers_DropDown)
-        this.setValue(this.speakersMail_Field, 'filip@yopmail.com')
-        this.setValue(this.speakersName_Field, 'Filip')
-        this.setValue(this.speakersSurname_Field, 'Vidakovic')
-        this.setValue(this.speakersTitle_Field, 'Mr')
+        this.setValue(this.speakersMail_Field, organizersAndSpeakersData.SpeakersMail)
+        this.setValue(this.speakersName_Field, organizersAndSpeakersData.SpeakersName)
+        this.setValue(this.speakersSurname_Field, organizersAndSpeakersData.SpeakersSurname)
+        this.setValue(this.speakersTitle_Field, organizersAndSpeakersData.SpeakersTitle)
     }
 
     fillWWYLDropDown(){
         this.click(this.whatWillYouLearn_DropDown)
-        this.setValue(this.WYWLField, 'All about Automation Test')
+        this.setValue(this.WYWLField, sponsorsAndPartnersData.WhatYouWillLearn)
     }
 
     fillFrequentlyAskedQuestion(){
         this.click(this.frequentlyAskedQuestions_DropDown)
-        this.setValue(this.FAQQuestion_Field, 'Can I use Screen Cast during Webinar?')
-        this.setValue(this.FAQAnswer_Field, 'No')
+        this.setValue(this.FAQQuestion_Field, sponsorsAndPartnersData.Question)
+        this.setValue(this.FAQAnswer_Field, sponsorsAndPartnersData.Answer)
     }
 
     fillSponsorsDropDown(){
         this.click(this.sponsors_DropDown)
-        this.setValue(this.sponsorsName_Field, 'Jovana Radojkovic')
-        this.setValue(this.sponsorsUrl_Field, 'PrimeVigelance.com')
+        this.setValue(this.sponsorsName_Field, sponsorsAndPartnersData.SponsorsName)
+        this.setValue(this.sponsorsUrl_Field, sponsorsAndPartnersData.SponsorsUrl)
     }
 
     fillPartnersDropDown(){
         this.click(this.partners_DropDown)
-        this.setValue(this.partnersName_Field, 'Ognjen Dokmanovic')
-        this.setValue(this.partnersUrl_Field, 'Bloxico.com')
+        this.setValue(this.partnersName_Field, sponsorsAndPartnersData.PartnersName)
+        this.setValue(this.partnersUrl_Field, sponsorsAndPartnersData.PartnersUrl)
     }
 
     fillBulletpointsDropDown(){

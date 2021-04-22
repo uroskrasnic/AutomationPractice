@@ -2,6 +2,7 @@
 // Login Page
 //
 
+const userData = require("../config/data/userData")
 const BasePage = require("./basePage")
 
 class LoginPage extends BasePage{
@@ -11,8 +12,8 @@ class LoginPage extends BasePage{
     get password_Field() {return $('//input[@type="password"]')}
 
     fillEmailAndPasswordField(){
-        this.email_Field.setValue('uroskrasnic@yahoo.com')
-        this.password_Field.setValue('Trening12!')
+        this.email_Field.setValue(userData.UserMail)
+        this.password_Field.setValue(userData.UserPassword)
     }
 
     clickOnLoginButton(){

@@ -1,8 +1,9 @@
 //
-//  Registration Page
+// Registration Page
 //
 
 var randomWords = require('random-words');
+const userData = require('../config/data/userData');
 const { UserPassword, LastName } = require('../config/data/userData');
 const BasePage = require('./basePage');
 
@@ -19,10 +20,10 @@ class RegistrationPage extends BasePage{
 
    fillAllFieldsWithData(){
        this.setValue(this.firstName_Field, randomWords())
-       this.setValue(this.lastName_Field, LastName)
+       this.setValue(this.lastName_Field, userData.userLastName)
        this.setValue(this.email_Field, (randomWords() + '@yopmail.com'))
-       this.setValue(this.password_Field, UserPassword)
-       this.setValue(this.retypePassword_Filed, UserPassword)
+       this.setValue(this.password_Field, userData.UserPassword)
+       this.setValue(this.retypePassword_Filed, userData.UserPassword)
     }
 
     checkConfirmationAge(){

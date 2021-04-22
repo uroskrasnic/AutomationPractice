@@ -1,5 +1,5 @@
 //
-//      AddWebinar.StepDefinition.js
+// AddWebinar.StepDefinition.js
 //
 
 const { Given, When, Then } = require('cucumber');

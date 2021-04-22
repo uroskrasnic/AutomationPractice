@@ -1,5 +1,5 @@
 //
-//       Login.StepDefinitions.js
+// Login.StepDefinitions.js
 //
 
 const { Given, When, Then } = require('cucumber');
