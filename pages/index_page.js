@@ -1,8 +1,9 @@
 //
-//    Index Page
+// Index Page
 //
 
 const assert = require('assert')
+const userData = require('../config/data/userData')
 const BasePage = require('./basePage')
 
 class IndexPage extends BasePage{
@@ -35,7 +36,7 @@ class IndexPage extends BasePage{
 
     loginConfirmationText(){
         const partnerText = this.getText(this.partner_DropDown)
-        strictEqual(partnerText, 'Partner')
+        strictEqual(partnerText, userData.PartnerAssertMessage)
     }
 
     clickOnRegistrationButton(){
@@ -44,7 +45,7 @@ class IndexPage extends BasePage{
 
     emailConfirmationIsSent(){
         const accountVerificationText = this.getText(this.accountVerificationText)
-        assert.equal(accountVerificationText, 'Account verification')
+        assert.equal(accountVerificationText, userData.AccountAssertMessage)
     }
 
     clickOnPartnerDropDown(){

@@ -10,6 +10,6 @@ module.exports = {
     Quantity: '100',
     StockAvailbillity: '90',
     SpecialPrice: '40',
-    OfferIncludes: 'PDF'
+    OfferIncludes: 'PDF presentation'
 
 }

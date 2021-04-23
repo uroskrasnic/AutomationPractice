@@ -1,5 +1,5 @@
 //
-//        Payment Info Page
+// Payment Info Page
 //
 
 class PaymentInfoPage {

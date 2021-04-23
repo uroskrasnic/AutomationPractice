@@ -8,7 +8,7 @@ module.exports = {
     Question: 'Can I use Screen Cast during Webinar?',
     Answer: 'No',
     SponsorsName: 'Jovana Radojkovic',
-    SponsorsUrl: 'Primevigelance.com',
+    SponsorsUrl: 'primevigelance.com',
     PartnersName: 'Ognjen Dokmanovic',
     PartnersUrl: 'Bloxico.com'
     

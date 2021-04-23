@@ -1,5 +1,5 @@
 //
-//   Become a Partner Page
+// Become a Partner Page
 //
 
 class BecomePartnerPage {

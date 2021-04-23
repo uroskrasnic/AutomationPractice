@@ -10,6 +10,7 @@ const titleAndLinksData = require('../config/data/titleAndLinksData');
 const priceData = require('../config/data/priceData');
 const organizersAndSpeakersData = require('../config/data/organizersAndSpeakersData');
 const sponsorsAndPartnersData = require('../config/data/sponsorsAndPartnersData');
+const userData = require('../config/data/userData');
 
 class AddWebinar extends BasePage{
 
@@ -207,7 +208,7 @@ class AddWebinar extends BasePage{
 
     publishRequestSent(){
         const publicationRequestedText = this.getText(this.publicationRequested_Text)
-        assert.equal(publicationRequestedText, 'Publication requested')
+        assert.equal(publicationRequestedText, userData.PublicationAssertMessage)
     }
 }
 

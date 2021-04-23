@@ -1,5 +1,5 @@
 //
-//         Shopping Cart Page
+// Shopping Cart Page
 //
 
 class ShoppingCart {

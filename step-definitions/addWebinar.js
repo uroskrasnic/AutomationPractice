@@ -30,8 +30,8 @@ Then(/^Click on Save button$/, () => {
 Then(/^On Add Webinar page in header section fill all required content$/, () => {
 	AddWebinarPage.titleText()
 	AddWebinarPage.dateSet()
-	//AddWebinarPage.addCoverImage()
-	//AddWebinarPage.addThumbnailImage()
+	AddWebinarPage.addCoverImage()
+	AddWebinarPage.addThumbnailImage()
 });
 
 Then(/^Fill all mandatory fields about Link,Price,Description,Organizers,Speakers etc$/, () => {

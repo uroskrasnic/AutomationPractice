@@ -1,5 +1,5 @@
 // 
-//      Product Details Page
+// Product Details Page
 //
 
 class ProductDetails {

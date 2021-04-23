@@ -1,5 +1,5 @@
 //
-//       Terms & Conditions Page
+// Terms & Conditions Page
 //
 
 class TermsConditionPage {

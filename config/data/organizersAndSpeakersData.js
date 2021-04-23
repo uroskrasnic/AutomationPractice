@@ -8,7 +8,7 @@ module.exports = {
     OrganizersOrganization: 'Bloxico',
     OrganizersName: 'Marko',
     OrganizersSurname: 'Cvorovic',
-    OrganizersTitle: 'Mr',
+    OrganizersTitle: 'Mister',
     SpeakersMail: 'filip@yopmail.com',
     SpeakersName: 'Filip',
     SpeakersSurname: 'Vidakovic',

@@ -16,7 +16,7 @@ module.exports = class BasePage{
    }
 
    click(element){
-       element.waitForDisplayed({timeout: 30000})
+       element.waitForDisplayed({timeout: 60000})
        element.click()
    }
 
