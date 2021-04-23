@@ -1,5 +1,5 @@
 //
-//     Sign up with Facebook page
+// Sign up with Facebook page
 //
 
 class signUpWithFacebookPage {

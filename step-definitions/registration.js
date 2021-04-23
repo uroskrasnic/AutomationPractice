@@ -1,10 +1,10 @@
 //
-//        Registration.StepDefinitions.js
+// Registration.StepDefinitions.js
 //
 
 const { Given, When, Then } = require('cucumber');
-const IndexPage = require('../pages/Index_page');
-const Registration_page = require('../pages/Registration_page');
+const IndexPage = require('../pages/index_page');
+const RegistrationPage = require('../pages/registration_page');
 
 Given(/^That user is on Index page and click on Registration button$/, () => {
     IndexPage.goToLoginPage()
@@ -12,15 +12,15 @@ Given(/^That user is on Index page and click on Registration button$/, () => {
 });
 
 Then(/^Fill all required field with valid data$/, () => {
-    Registration_page.fillAllFieldsWithData()
+    RegistrationPage.fillAllFieldsWithData()
 });
 
 Then(/^Check confirmation checkbox$/, () => {
-	Registration_page.checkConfirmationAge()
+	RegistrationPage.checkConfirmationAge()
 });
 
 When(/^User click on Create Account button$/, () => {
-    Registration_page.clickOnCreateAccount()
+    RegistrationPage.clickOnCreateAccount()
 });
 
 Then(/^Confirmation e-mail is sent$/, () => {

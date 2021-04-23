@@ -1,5 +1,5 @@
 //
-//    Partner Subscriptions Page
+// Partner Subscriptions Page
 //
 
 class PartnerSubscriptionPage {

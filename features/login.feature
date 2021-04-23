@@ -1,14 +1,14 @@
-Feature: Login - Positive flow
+#Feature: Login - Positive flow
 
-    Background: User is on Index page and navigete to Login page
+#    Background: User is on Index page and navigete to Login page
 
-        Given That user click on Login button
+#        Given That user click on Login button
         
-        Scenario: Successifully login into SLP
+#        Scenario: Successifully login into SLP
 
-        And Fill both field with valid data 
-        When User click on Login button 
-        Then User is successifully logged in 
+#        And Fill both field with valid data 
+#        When User click on Login button 
+#        Then User is successifully logged in 
 
 
 #  Scenario: Sign in with Facebook 

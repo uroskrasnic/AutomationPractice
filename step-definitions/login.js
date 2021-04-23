@@ -1,10 +1,10 @@
 //
-//       Login.StepDefinitions.js
+// Login.StepDefinitions.js
 //
 
 const { Given, When, Then } = require('cucumber');
-const IndexPage = require('../pages/Index_page');
-const LoginPage = require('../pages/Login_page');
+const IndexPage = require('../pages/index_page');
+const LoginPage = require('../pages/login_page');
 
 Given(/^That user click on Login button$/, () => {
 	IndexPage.goToLoginPage()

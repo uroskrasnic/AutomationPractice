@@ -1,5 +1,5 @@
 //
-//        Membership registration
+// Membership registration
 //
 
 class MembershipRegistrationPage {

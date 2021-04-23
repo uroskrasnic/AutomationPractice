@@ -1,5 +1,5 @@
 //
-//           Shop Settings Page
+// Shop Settings Page
 //
 
     class ShopSettings {

@@ -1,5 +1,5 @@
  //
- //      Cart Item Page
+ // Cart Item Page
  //
 
     class CartItem {
